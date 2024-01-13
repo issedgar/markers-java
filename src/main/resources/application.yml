@@ -1,0 +1,23 @@
+server:
+  port: 5102
+  servlet:
+      contextPath:
+        /api/markers
+
+spring:
+  application:
+    name: service-markers
+  jpa:
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5777/postgres
+    username: root
+    password: root
+
